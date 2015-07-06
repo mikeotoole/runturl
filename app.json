@@ -1,0 +1,12 @@
+{
+  "name": "Runt URL",
+  "description": "Make runt size URLs",
+  "repository": "https://github.com/mikeotoole/runturl",
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
+  "keywords": ["rails", "ruby", "cats"]
+}
