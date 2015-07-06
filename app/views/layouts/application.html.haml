@@ -13,6 +13,7 @@
     = csrf_meta_tag
 
   %body
-
-    = yield
-
+    .row.main
+      .medium-10.columns.main-content
+        = render 'layouts/messages'
+        = yield

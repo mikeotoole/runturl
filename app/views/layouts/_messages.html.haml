@@ -1,0 +1,11 @@
+-# Rails flash messages styled for Zurb Foundation
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    %div{ class: "alert-box radius #{name == 'notice' ? 'success' : 'alert'}", 'data-alert' => '' }
+      = content_tag :div, msg
+      %a.close{ href: "#"} &times;
+  - elsif msg.is_a?(Array)
+    - msg.each do |m|
+      %div{ class: "alert-box radius #{name == 'notice' ? 'success' : 'alert'}", 'data-alert' => '' }
+        = content_tag :div, m
+        %a.close{ href: "#"} &times;

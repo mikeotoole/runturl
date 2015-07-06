@@ -24,7 +24,7 @@ module Runturl
       g.stylesheets false
       g.helper false
       g.jbuilder true
-      g.template_engine false
+      g.template_engine :haml
     end
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
