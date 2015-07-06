@@ -1,0 +1,25 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "6e70b65b90f55b54253e829e876f790ebecf6665fe4d2e04bed0cfdade2afbf0",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/short_urls_controller.rb",
+      "line": 5,
+      "link": "http://brakemanscanner.org/docs/warning_types/redirect/",
+      "code": "redirect_to(ShortUrl.find_by_base62_id!(params[:base62_id]).original_url, :status => 301)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "ShortUrlsController",
+        "method": "show"
+      },
+      "user_input": "ShortUrl.find_by_base62_id!(params[:base62_id]).original_url",
+      "confidence": "High",
+      "note": ""
+    }
+  ],
+  "updated": "2015-07-06 20:29:47 -0600",
+  "brakeman_version": "3.0.5"
+}

@@ -1,0 +1,17 @@
+%h1 Runt URL
+.short-urls.new
+  .row
+    = simple_form_for @short_url do |f|
+      .small-6.columns
+        = f.input :original_url, label: false,
+                                 placeholder: 'Enter a URL you would like shortened',
+                                 input_html: { value: @shortened_url || @short_url.try(:original_url) }
+      .small-2.columns.end
+        - css_class = 'button tiny' + (@shortened_url ? ' hidden' : '')
+        = f.button :submit, 'Shorten', class: css_class, id: 'short-url-submit-button'
+  .row
+    .small-6.columns.end
+      - if @shortened_url
+        = link_to 'Test Short Link', @shortened_url, target: '_blank',
+                                                     id: 'short-url-test-link',
+                                                     class: 'button tiny'

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.2'
+gem 'base62-rb'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'foundation-rails'
 gem 'haml-rails'
